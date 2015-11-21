@@ -33,7 +33,7 @@ function Animal (name, species, type, climate, gender, age) {
 	this.findEnclosure = function () {
 		for (var i = 0, len = arrayOfEnclosures.length; i < len; i++) {
 			if (arrayOfEnclosures[i].speciesAccepted.indexOf(this.species) >= 0) {
-				console.log("the animal is accepted in the enclosure: " + arrayOfEnclosures[i].name);
+				console.log(this.name + ' the ' + this.species + " is accepted in the enclosure: " + arrayOfEnclosures[i].name);
 				return arrayOfEnclosures[i];
 			}
 		}
@@ -59,7 +59,7 @@ function Animal (name, species, type, climate, gender, age) {
 
 };
 
-//create animals
+//create animals and array of all animal objects
 var jimi 					 = new Animal ("Jimi", "Penguin", "Carnivore", "Polar", "M", 10),
 	  steve 				 = new Animal ("Steve", "Penguin", "Carnivore", "Polar", "M", 2),
 	  janis 				 = new Animal ("Janis", "Penguin", "Carnivore", "Polar", "F", 5),
