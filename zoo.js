@@ -14,10 +14,20 @@ function Animal (name, species, type, climate, gender, age) {
 
 	this.moveToEnclosure = function (enclosure) {
 		console.log('move to enclosure method');
+		if (this.climate === enclosure.climate && this.type === enclosure.type) {
+			enclosure.animals.push(this);
+			this.enclosure = enclosure;
+		} else {
+			console.log('Sorry, ' +this.name+ " the " +this.species+ ' cannot be moved to that enclosure.');
+		}
 	},
 
 	this.currentEnclosure = function () {
-		console.log('This anmial is currently in', this.enclosure);
+		if (this.enclosure === undefined) {
+			console.log("This animal is not in an enclosure.");
+		} else {
+			console.log('This anmial is currently in', this.enclosure.name);
+		}
 	}
 
 };
@@ -65,9 +75,6 @@ var polarCarnivores 	 = new Enclosure ("Polar Carnivores", ["Penguin", "Polar Be
 		savannahHerbivores = new Enclosure ("Savannah Herbivores", ["Giraffe"], "Savannah", "Herbivore", []),
 		jungleHerbivores	 = new Enclosure ("Jungle Herbivores", ["Parrot"], "Jungle", "Herbivore", []),
 		jungleCarnivores	 = new Enclosure ("Jungle Carnivores", ["Jaguar"], "Jungle", "Carnivore", []);
-
-
-//populate enclosures
 
 
 
