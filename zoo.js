@@ -66,9 +66,20 @@ var polarCarnivores 	 = new Enclosure ("Polar Carnivores", ["Penguin", "Polar Be
 		jungleHerbivores	 = new Enclosure ("Jungle Herbivores", ["Parrot"], "Jungle", "Herbivore", []),
 		jungleCarnivores	 = new Enclosure ("Jungle Carnivores", ["Jaguar"], "Jungle", "Carnivore", []);
 
+var arrayOfEnclosures = [polarCarnivores, savannahHerbivores, savannahCarnivores, jungleCarnivores, jungleHerbivores];
+
 
 //populate enclosures
+//need to add this to the animal object
+var findEnclosure = function findEnclosure (animal, enclosures) {
 
+	for (var i = 0, len = enclosures.length; i < len; i++) {
+		if (enclosures[i].speciesAccepted.indexOf(animal.species) >= 0) {
+			console.log("the animal is accepted in the enclosure: ", enclosures[i].name);
+		}
+	}
+
+};
 
 
 
