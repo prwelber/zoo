@@ -55,6 +55,16 @@ function Animal (name, species, type, climate, gender, age) {
 		} else {
 			console.log('This anmial is currently in', this.enclosure.name);
 		}
+	},
+	this.removeFromEnclosure = function () {
+		if (this.enclosure) {
+			var index = this.enclosure.animals.indexOf(this);
+			this.enclosure.animals.splice(index, 1);
+			this.enclosure = undefined;
+			console.log(this.name + " has been removed");
+		} else {
+			console.log('The animal is not in an enclosure yet. Run moveToEnclosure(enclosureName).')
+		}
 	}
 
 };
