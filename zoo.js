@@ -99,6 +99,6 @@ var populateEverything = function populateEverything () {
 
 //help is immediately invoked for the user
 var help = function help () {
-	console.log('Welcome to the zoo. To inspect an animal, simply type their name. Each animal has three methods: findEnclosure(), moveToEnclosure(enclosure), and currentEnclosure(). To inspect an enclosure, type the name. If you have moved some animals around and want to see what animals are in the enclosure, type nameofenclosure.animals');
+	console.log('Welcome to the zoo. To inspect an animal, simply type their name. Each animal has four methods: findEnclosure(), moveToEnclosure(enclosure), currentEnclosure(), and removeFromEnclosure(). To inspect an enclosure, type the name. If you have moved some animals around and want to see what animals are in the enclosure, type nameofenclosure.animals');
 }();
 
