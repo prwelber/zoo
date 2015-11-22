@@ -95,6 +95,15 @@ var populateEverything = function populateEverything () {
 	arrayOfAnimals.forEach(animal => animal.moveToEnclosure(animal.findEnclosure()));
 };
 
+//log out all enclosures and their animals
+var showAllEnclosures = function showAllEnclosures () {
+	for (var i = 0, len = arrayOfEnclosures.length; i < len; i++) {
+		for (var j = 0, nestedLength = arrayOfEnclosures[i].animals.length; j < nestedLength; j++) {
+			console.log(arrayOfEnclosures[i].name + " has the animal: " + arrayOfEnclosures[i].animals[j].name + " who is a " + arrayOfEnclosures[i].animals[j].species);
+		}
+	}
+};
+
 
 //help function is immediately invoked for the user
 var help = function help () {
