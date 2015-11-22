@@ -29,7 +29,7 @@ function Animal (name, species, type, climate, gender, age) {
 	this.age = age,
 	this.enclosure,
 
-	//findEnclosure method will log out an enclosure where the animal is accepted
+	//findEnclosure method will log out an enclosure where the animal is accepted and return the enclosure
 	this.findEnclosure = function () {
 		for (var i = 0, len = arrayOfEnclosures.length; i < len; i++) {
 			if (arrayOfEnclosures[i].speciesAccepted.indexOf(this.species) >= 0) {
@@ -66,7 +66,6 @@ function Animal (name, species, type, climate, gender, age) {
 			console.log('The animal is not in an enclosure yet. Run moveToEnclosure(enclosureName).')
 		}
 	}
-
 };
 
 //create animals and array of all animal objects
@@ -97,8 +96,8 @@ var populateEverything = function populateEverything () {
 };
 
 
-//help is immediately invoked for the user
+//help function is immediately invoked for the user
 var help = function help () {
-	console.log('Welcome to the zoo. To inspect an animal, simply type their name. Each animal has four methods: findEnclosure(), moveToEnclosure(enclosure), currentEnclosure(), and removeFromEnclosure(). To inspect an enclosure, type the name. If you have moved some animals around and want to see what animals are in the enclosure, type nameofenclosure.animals');
+	console.log('Welcome to the zoo. To inspect an animal, simply type their name. Each animal has four methods: findEnclosure(), moveToEnclosure(enclosure), currentEnclosure(), and removeFromEnclosure(). To inspect an enclosure, type the name. If you have moved some animals around and want to see what animals are in the enclosure, type nameofenclosure.animals. If you run the populateEverything() function, each animal will be placed into an appropriate enclosure.');
 }();
 
